@@ -1,0 +1,2267 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geologica:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link href="./assets/css/style.css?v=4" rel="stylesheet" />
+    <link href="./assets/css/style-responsive.css" rel="stylesheet" />
+    <link rel="icon" href="/favicon.ico" />
+
+    <title>TravelOne</title>
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-lg navbar-light">
+                <a class="navbar__brand" href="#">
+                    <img src="./assets/img/logo.svg" alt="Logo">
+                </a>
+                <button class="navbar__toggler navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar__toggler-icon navbar-toggler-icon"></span>
+                </button>
+    
+                <div class="navbar__collapse collapse navbar-collapse" id="mainNavbar">
+                    <ul class="navbar__menu navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="navbar__item nav-item">
+                            <a class="navbar__link nav-link active" aria-current="page" href="#">Προορισμοί</a>
+                        </li>
+                        <li class="navbar__item nav-item">
+                            <a class="navbar__link nav-link" href="#">Είδη ταξιδιού</a>
+                        </li>
+                        <li class="navbar__item nav-item dropdown">
+                            <a class="navbar__link nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Περίοδοι
+                            </a>
+                            <ul class="navbar__dropdown dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Action</a></li>
+                                <li><a class="dropdown-item" href="#">Another action</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Something else here</a></li>
+                            </ul>
+                        </li>
+                        <li class="navbar__item nav-item">
+                            <a class="navbar__link nav-link" href="#">Αναχώρηση από</a>
+                        </li>
+                        <li class="navbar__item nav-item">
+                            <a class="navbar__link nav-link" href="#">Προσφορές εβδομάδας</a>
+                        </li>
+                    </ul>
+    
+                    <div class="navbar__contact-wrapper">
+						<div class="search-container ">
+							<div class="search-inline-wrapper">
+								<input type="text" class="search-inline-input" placeholder="Αναζήτηση...">
+								<div class="search-inline-icon">
+									<i class="fa fa-search"></i>
+								</div>
+							</div>
+						</div>
+						
+						<div class="navbar__contact d-flex align-items-center" onclick="toggleDropdown()">
+							<div class="contact__icon me-2">
+							<img src="./assets/img/headphone.svg" alt="Customer Service">
+							</div>
+							<div class="contact__info">
+							<small class="contact__label">Εξυπηρέτηση πελατών</small>
+							<a class="contact__phone" href="tel:+302102241152">+30 210 224 1152</a>
+							</div>
+							<span class="arrow">&#9662;</span>
+						</div>
+						
+						<div id="contactDropdown" class="dropdown-content">
+							<div class="dropdown-section">
+							<div><strong>Ώρες λειτουργίας</strong></div>
+							<div>Δευτέρα έως Παρασκευή: 10:30 έως 18:00</div>
+							<div>Σαββάτο: 10:30 έως 14:00</div>
+							</div>
+							<hr />
+							<div class="dropdown-section">
+							<strong>Email επικοινωνίας</strong><br />
+							<a href="mailto:info@travelone.gr">info@travelone.gr</a>
+							</div>
+						</div>
+                    </div>
+    
+                    <a href="#" class="navbar__btn btn btn-primary ms-3">Σύνδεση</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <!-- Header -->
+<br><br><br><br><br><br><br>
+    <!-- tab Section -->
+ <section class="search-bar min-vh-5 d-flex">
+    <div class="container">
+		<div id="tab3" class="tab-content-box">
+            <div class="d-flex flex-column flex-md-row align-items-center justify-content-between flex-wrap">
+        
+                <div class="custom-form-wrapper m-2">
+					<div class="custom-form position-relative d-flex align-items-center">
+					  <input type="text" class="form-control custom-input" id="countryInput" placeholder=" " required>
+					  <label for="countryInput" class="custom-label">Προορισμός</label>
+					  <span class="info-icon"><i class="fa fa-map-marker"></i></span>
+					</div>
+					<div class="dropdown-panel panel2" aria-hidden="true">
+						<h3 class="title mb-2">Ελλαδα </h3>
+						<div class="dropdown-item d-flex align-items-center justify-content-between">
+						  <div class="d-flex align-items-center gap-2">
+							<img src="./assets/img/img1.svg" alt="">
+							<span>Αττική - Αργοσαρωνικός</span>
+						  </div>
+						  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</div>
+						<div class="dropdown-item d-flex align-items-center justify-content-between">
+						  <div class="d-flex align-items-center gap-2">
+							<img src="./assets/img/img1.svg" alt="">
+							<span>Δωδεκάνησα</span>
+						  </div>
+						  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</div>
+						<div class="dropdown-item d-flex align-items-center justify-content-between">
+						  <div class="d-flex align-items-center gap-2">
+							<img src="./assets/img/img1.svg" alt="">
+							<span>Θεσσαλία - Σποράδες</span>
+						  </div>
+						  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</div>
+						<div class="dropdown-item d-flex align-items-center justify-content-between">
+						  <div class="d-flex align-items-center gap-2">
+							<img src="./assets/img/img1.svg" alt="">
+							<span>Θεσσαλία - Σποράδες</span>
+						  </div>
+						  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</div>
+						<div class="dropdown-item d-flex align-items-center justify-content-between">
+						  <div class="d-flex align-items-center gap-2">
+							<img src="./assets/img/img1.svg" alt="">
+							<span>Θεσσαλία - Σποράδες</span>
+						  </div>
+						  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</div>
+						<div class="dropdown-item d-flex align-items-center justify-content-between">
+						  <div class="d-flex align-items-center gap-2">
+							<img src="./assets/img/img1.svg" alt="">
+							<span>Θεσσαλία - Σποράδες</span>
+						  </div>
+						  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</div><div class="dropdown-item d-flex align-items-center justify-content-between">
+						  <div class="d-flex align-items-center gap-2">
+							<img src="./assets/img/img1.svg" alt="">
+							<span>Θεσσαλία - Σποράδες</span>
+						  </div>
+						  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</div>
+						<div class="dropdown-item d-flex align-items-center justify-content-between">
+						  <div class="d-flex align-items-center gap-2">
+							<img src="./assets/img/img1.svg" alt="">
+							<span>Θεσσαλία - Σποράδες</span>
+						  </div>
+						  <i class="fa fa-arrow-right" aria-hidden="true"></i>
+						</div>
+					</div>
+				</div>
+			
+				<div class="custom-form-wrapper m-2">	
+					<div class="custom-form position-relative d-flex align-items-center">
+					  <input type="text" class="form-control custom-input" id="monthInput3" placeholder=" " required>
+					  <label for="monthInput3" class="custom-label">Μήνας</label>
+					  <span class="info-icon"><i class="fa fa-calendar-o"></i></span>
+					</div>
+					<div class="dropdown-panel panel3" aria-hidden="true">
+						<div class="pills-wrapper">
+						  <ul class="nav nav-pills justify-content-around mb-3" id="sidebarTabs" role="tablist">
+							<li class="nav-item" role="presentation">
+							  <button class="nav-link active" id="full-month-tab3" data-bs-toggle="pill" data-bs-target="#" type="button" role="tab" aria-controls="content-full-month3" aria-selected="true">Ολόκληρος μήνας</button>
+							</li>
+							<li class="nav-item" role="presentation">
+							  <button class="nav-link" id="exact-dates-tab3" data-bs-toggle="pill" data-bs-target="#" type="button" role="tab" aria-controls="content-exact-dates3" aria-selected="false">Ακριβείς ημερομηνίες</button>
+							</li>
+						  </ul>
+						</div>
+						<div class="tab-content">
+						 <div class="tab-pane fade show active" id="content-full-month3" role="tabpanel" aria-labelledby="full-month-tab3">
+							<div class="month-select row gx-2 gy-2">
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Δεκέμβριος</h3>
+								  <p>2024</p>
+								</div>
+							  </div>
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Ιανουάριος</h3>
+								  <p>2025</p>
+								</div>
+							  </div>
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Φεβρουάριος</h3>
+								  <p>2025</p>
+								</div>
+							  </div><div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Μάρτιος</h3>
+								  <p>2025</p>
+								</div>
+							  </div>
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Απρίλιος</h3>
+								  <p>2025</p>
+								</div>
+							  </div>
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Μάιος</h3>
+								  <p>2025</p>
+								</div>
+							  </div>
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Ιούνιος</h3>
+								  <p>2025</p>
+								</div>
+							  </div>
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Ιούλιος</h3>
+								  <p>2025</p>
+								</div>
+							  </div>
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Αύγουστος</h3>
+								  <p>2025</p>
+								</div>
+							  </div>
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Σεπτέμβριος</h3>
+								  <p>2025</p>
+								</div>
+							  </div>
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Οκτώβριος</h3>
+								  <p>2025</p>
+								</div>
+							  </div>
+							  <div class="col-6 col-md-4 col-lg-2">
+								<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+								  <h3>Νοέμβριος</h3>
+								  <p>2025</p>
+								</div>
+							  </div>
+							</div>
+						  </div>
+							<div class="tab-pane fade" id="content-exact-dates3" role="tabpanel" aria-labelledby="exact-dates-tab3">
+								<div class="calendar-container">
+								  <button id="prev-month-3" aria-label="Previous Month" class="nav-btn">&#x2039;</button>
+								  <div class="calendars-wrapper">
+									<div id="calendar-1-3" class="calendar-month"></div>
+									<div class="divider"></div>
+									<div id="calendar-2-3" class="calendar-month"></div>
+								  </div>
+								  <button id="next-month-3" aria-label="Next Month" class="nav-btn">&#x203A;</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			
+				<div class="custom-form-wrapper m-2">
+				  <div class="custom-form position-relative d-flex align-items-center">
+					<input type="text" class="form-control custom-input" id="nightInput" placeholder=" " required autocomplete="off">
+					<label for="nightInput" class="custom-label">Διανυκτερεύσεις</label>
+					<span class="chevron-icon"><i class="fa fa-angle-down"></i></span>
+				  </div>
+				  <div class="dropdown-panel panel4" style="width:178px;" aria-hidden="true">
+					<p class="dropdown-item">1</p>
+					<p class="dropdown-item">2</p>
+					<p class="dropdown-item">3</p>
+					<p class="dropdown-item">4</p>
+					<p class="dropdown-item">5</p>
+					<p class="dropdown-item">6</p>
+					<p class="dropdown-item">7</p>
+					<p class="dropdown-item">8</p>
+					<p class="dropdown-item">9</p>
+					<p class="dropdown-item">10</p>
+				  </div>
+				</div>
+			
+				<div class="custom-form-wrapper m-2">
+				  <div class="custom-form position-relative d-flex align-items-center">
+					  <input type="text" class="form-control custom-input" id="seasonselect" placeholder=" " required>
+					  <label for="seasonselect" class="custom-label">Περίοδοι</label>
+					  <span class="chevron-icon"><i class="fa fa-angle-down"></i></span>
+				  </div>
+				  <div class="dropdown-panel panel6" aria-hidden="true">
+					<p class="dropdown-item"><span class="season-icon">&#x2744;</span>  Χειμώνας</p>
+					<p class="dropdown-item"><span class="season-icon">&#x2698;</span> Άνοιξη</p>
+					<p class="dropdown-item"><span class="season-icon">&#x2600;</span> Καλοκαίρι</p>
+					<p class="dropdown-item"><span class="season-icon">&#x1F327;</span> Φθινόπωρο</p>
+				  </div>
+				</div>
+				
+				<div class="custom-form-wrapper m-2">
+				  <div class="custom-form position-relative d-flex align-items-center">
+					<input type="text" class="form-control custom-input" id="visitorselect" placeholder=" " required>
+					<label for="visitorselect" class="custom-label">Επισκέπτες</label>
+					<span class="info-icon"><i class="fa fa-users"></i></span>
+				  </div>
+				  <div class="dropdown-panel panel7" aria-hidden="true">
+					<div class="room-block">
+						<p class="dropdown-title mb-3">Δωμάτιο 1</p>
+						<div class="visitor-frame d-flex justify-content-between align-items-center">
+						  <div class="visitor-labels d-flex flex-column">
+							<p class="visitor-type">Ενήλικες</p>
+							<p class="visitor-note">16+ ετών</p>
+						  </div>
+						  <div class="visitor-controls d-flex align-items-center">
+							<button class="count-btn minus" type="button">−</button>
+							<span class="count-num">0</span>
+							<button class="count-btn plus" type="button">+</button>
+						  </div>
+						</div>
+						<div class="visitor-frame d-flex justify-content-between align-items-center">
+						  <div class="visitor-labels d-flex flex-column">
+							<p class="visitor-type">Παιδιά</p>
+							<p class="visitor-note">2–15 ετών</p>
+						  </div>
+						  <div class="visitor-controls d-flex align-items-center">
+							<button class="count-btn minus" type="button">−</button>
+							<span class="count-num">0</span>
+							<button class="count-btn plus" type="button">+</button>
+						  </div>
+						</div>
+						<div class="visitor-frame d-flex justify-content-between align-items-center">
+						  <div class="visitor-labels d-flex flex-column">
+							<p class="visitor-type">Βρέφη</p>
+							<p class="visitor-note">Κάτω των 2 ετών</p>
+						  </div>
+						  <div class="visitor-controls d-flex align-items-center">
+							<button class="count-btn minus" type="button">−</button>
+							<span class="count-num">0</span>
+							<button class="count-btn plus" type="button">+</button>
+						  </div>
+						</div>
+					</div>
+					<div class="more-btn mt-3">Προσθηκη δωματίου</div>
+				  </div>
+				</div>
+                <div class="m-2">
+                    <button type="submit" class="btn btn-danger w-100">ΑΝΑΖΗΤΗΣΗ</button>
+                </div>
+            </div>
+        </div> 
+  </div>
+</section>
+
+    <!-- photo Section -->
+	<div class="container hotel-room-header py-4">
+	  <div class="row g-2">
+		<div class="col-12 d-flex flex-column align-items-start">
+			<h2 style="margin:0;"> Olympian Bay Grand Resort</h2>
+			<div class="same-row d-flex flex-column flex-lg-row justify-content-between align-items-center mb-2 w-100">	
+				<div class="left">
+					<p>Ramba del Raval 17 21, Barcelona, Spain</p> 
+					<button><i class="fa fa-map-marker"></i> Δειτε το χαρτη</button>
+				</div>
+				<div class="hotel-info d-flex justify-content-end align-items-center">
+				  <div style="width: 100%; display: flex; justify-content: flex-end;">
+					<label>
+					  <i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i>
+					  <h6>|</h6> 
+					  <i class="fa fa-tripadvisor tripadvisor-icon"></i> 
+					  <i class="fa fa-circle tripadvisor-circle-icon"></i>
+					  <i class="fa fa-circle tripadvisor-circle-icon"></i>
+					  <i class="fa fa-circle tripadvisor-circle-icon"></i>
+					  <i class="fa fa-circle tripadvisor-circle-icon"></i>
+					  <i class="fa fa-circle-thin tripadvisor-circle-icon"></i>
+					  <h6>400 κριτικές</h6>
+					</label>
+				  </div>
+				</div>
+			</div>
+			<p>0.4 χλμ από το κέντρο</p>
+	    </div>
+		<div class="col-12 mt-3 position-relative">
+		  <div class="row g-3">
+			<div class="col-lg-6">
+			  <img src="./assets/img/hotel1.png" alt="" class="img-fluid hotel-img">
+			</div>
+			<div class="col-lg-6">
+			  <div class="row g-3">
+				<div class="col-6">
+				  <img src="./assets/img/hotel2.png" alt="" class="img-fluid hotel-img">
+				</div>
+				<div class="col-6">
+				  <img src="./assets/img/hotel3.png" alt="" class="img-fluid hotel-img">
+				</div>
+				<div class="col-6">
+				  <img src="./assets/img/hotel4.png" alt="" class="img-fluid hotel-img">
+				</div>
+				<div class="col-6">
+				  <img src="./assets/img/hotel5.png" alt="" class="img-fluid hotel-img">
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <!-- Overlay button -->
+		  <button class="btn btn-light position-absolute d-flex align-items-center">
+			<i class="fa fa-image" style="color: #8991A8;"></i> Όλες οι φωτογραφίες
+		  </button>
+		</div>
+	   </div>
+	 </div>
+	
+	<!--  -->
+<div class="container hotel-text-container py-4">
+  <div class="row g-2">
+    <h2>Πληροφορίες για το ξενοδοχείο</h2>
+    <h4>Περιγραφή</h4>
+    <p style="color:#666767;">
+      Για τους τουρίστες που ταξιδεύουν με αυτοκίνητο, υπάρχει ζώνη δωρεάν στάθμευσης.
+      Ειδικά για τους τουρίστες που ταξιδεύουν με αυτοκίνητο, υπάρχει ζώνη στάθμευσης.
+      Το προσωπικό του διαμερίσματος θα παραγγείλει μεταφορικό μέσο για λογαριασμό σας.
+      Προσβάσιμο για άτομα με ειδικές ανάγκες: το ασανσέρ τους βοηθά να πάνε στους υψηλότερους ορόφους.
+    </p>
+  </div>
+
+  <div class="row g-2 py-4">
+    <h4>Πρόσθετες υπηρεσίες</h4>
+    <p style="color:#666767;">
+      που το διαμέρισμα προσφέρει στους πελάτες του: πλυντήριο, ιδιωτική άφιξη και αναχώρηση και σιδέρωμα.
+      Tο προσωπικό του διαμερίσματος θα χαρεί να μιλήσει μαζί σας στα αγγλικά, ισπανικά, ιταλικά και γαλλικά.
+    </p>
+  </div>
+
+  <!-- Hidden duplicate sections -->
+  <div id="extra-content" style="display:none;">
+    <div class="row g-2 py-4">
+      <h4>Περιγραφή (συνέχεια)</h4>
+      <p style="color:#666767;">
+        Για τους τουρίστες που ταξιδεύουν με αυτοκίνητο, υπάρχει ζώνη δωρεάν στάθμευσης.
+        Ειδικά για τους τουρίστες που ταξιδεύουν με αυτοκίνητο, υπάρχει ζώνη στάθμευσης.
+        Το προσωπικό του διαμερίσματος θα παραγγείλει μεταφορικό μέσο για λογαριασμό σας.
+        Προσβάσιμο για άτομα με ειδικές ανάγκες: το ασανσέρ τους βοηθά να πάνε στους υψηλότερους ορόφους.
+      </p>
+    </div>
+
+    <div class="row g-2 py-4">
+      <h4>Πρόσθετες υπηρεσίες (συνέχεια)</h4>
+      <p style="color:#666767;">
+        που το διαμέρισμα προσφέρει στους πελάτες του: πλυντήριο, ιδιωτική άφιξη και αναχώρηση και σιδέρωμα.
+        Tο προσωπικό του διαμερίσματος θα χαρεί να μιλήσει μαζί σας στα αγγλικά, ισπανικά, ιταλικά και γαλλικά.
+      </p>
+    </div>
+  </div>
+
+  <span id="more-btn">
+	 Περισσότερα <i class="fa fa-angle-down"></i>
+  </span>
+</div> 
+	 <!--  -->
+	<div class="container py-4">
+  <h4>Παροχές</h4>
+  <div class="row row-cols-2 row-cols-lg-5 g-2">
+	<div class="col">
+      <div class="hotel-box-fac">
+        <i class="fa fa-language"></i><span>Πολύγλωσσο</span>
+      </div>
+    </div>
+	<div class="col">
+      <div class="hotel-box-fac">
+        <i class="fa fa-taxi"></i><span>Ταξί από αεροπλάνο</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="hotel-box-fac">
+        <i class="fa fa-building-o"></i><span>Χρηματοκιβώτιο</span>
+      </div>
+    </div>
+	<div class="col">
+      <div class="hotel-box-fac">
+        <i class="fa fa-wheelchair"></i><span>Πρόσβαση για ΑΜΕΑ</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="hotel-box-fac">
+        <i class="fa fa-tint"></i><span>Εξωτερική πισίνα</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="hotel-box-fac">
+        <i class="fa fa-bicycle"></i><span>Ποδήλατα</span>
+      </div>
+    </div>
+    
+    <div class="col">
+      <div class="hotel-box-fac">
+        <i class="fa fa-coffee"></i><span>Καφετέρια</span>
+      </div>
+    </div>
+    <div class="col">
+      <div class="hotel-box-fac">
+        <i class="fa fa-wifi"></i><span>Internet</span>
+      </div>
+    </div>
+	<div class="col">
+      <div class="hotel-box-fac">
+        <i class="fa fa-cutlery"></i><span>Εστιατόριο</span>
+      </div>
+    </div>
+    <div class="col">
+     <button class="hotel-box-fac extra-services" id="openPopupBtn1" data-popup="popup1">
+		<span>Έξτρα παροχές</span>
+		<i class="fa fa-arrow-right"></i>
+	  </button>
+    </div>
+    
+  </div>
+</div>
+
+	
+    <!-- avalaible -->
+    <section class="destination" style="background: #ECEFF6;">
+        <div class="inner-destination">
+            <div class="container">
+                <div class="row justify-content-center align-items-start p-3 min-vh-100">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>Διαθεσιμότητα</h2>
+                        </div>
+                    </div>
+					
+					<section class="search-bar min-vh-5 d-flex">
+					  <div class="container">
+						<div class="tab-content-box">
+							<div class="d-flex flex-column flex-md-row align-items-center justify-content-between flex-wrap">
+								<div class="custom-form-wrapper m-2">	
+									<div class="custom-form position-relative d-flex align-items-center">
+									  <input type="text" class="form-control custom-input" id="monthInput1" placeholder=" " required>
+									  <label for="monthInput1" class="custom-label">Μήνας</label>
+									  <span class="info-icon"><i class="fa fa-calendar-o"></i></span>
+									</div>
+									<div class="dropdown-panel panel3" aria-hidden="true">
+										<div class="pills-wrapper">
+										  <ul class="nav nav-pills justify-content-around mb-3" id="sidebarTabs" role="tablist">
+											<li class="nav-item" role="presentation">
+											  <button class="nav-link active" id="full-month-tab1" data-bs-toggle="pill" data-bs-target="#" type="button" role="tab" aria-controls="content-full-month1" aria-selected="true">Ολόκληρος μήνας</button>
+											</li>
+											<li class="nav-item" role="presentation">
+											  <button class="nav-link" id="exact-dates-tab1" data-bs-toggle="pill" data-bs-target="#" type="button" role="tab" aria-controls="content-exact-dates1" aria-selected="false">Ακριβείς ημερομηνίες</button>
+											</li>
+										  </ul>
+										</div>
+										<div class="tab-content">
+										 <div class="tab-pane fade show active" id="content-full-month1" role="tabpanel" aria-labelledby="full-month-tab1">
+											<div class="month-select row gx-2 gy-2">
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Δεκέμβριος</h3>
+												  <p>2024</p>
+												</div>
+											  </div>
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Ιανουάριος</h3>
+												  <p>2025</p>
+												</div>
+											  </div>
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Φεβρουάριος</h3>
+												  <p>2025</p>
+												</div>
+											  </div><div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Μάρτιος</h3>
+												  <p>2025</p>
+												</div>
+											  </div>
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Απρίλιος</h3>
+												  <p>2025</p>
+												</div>
+											  </div>
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Μάιος</h3>
+												  <p>2025</p>
+												</div>
+											  </div>
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Ιούνιος</h3>
+												  <p>2025</p>
+												</div>
+											  </div>
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Ιούλιος</h3>
+												  <p>2025</p>
+												</div>
+											  </div>
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Αύγουστος</h3>
+												  <p>2025</p>
+												</div>
+											  </div>
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Σεπτέμβριος</h3>
+												  <p>2025</p>
+												</div>
+											  </div>
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Οκτώβριος</h3>
+												  <p>2025</p>
+												</div>
+											  </div>
+											  <div class="col-6 col-md-4 col-lg-2">
+												<div class="month p-3 d-flex flex-column justify-content-center align-items-center">
+												  <h3>Νοέμβριος</h3>
+												  <p>2025</p>
+												</div>
+											  </div>
+											</div>
+										  </div>
+											<div class="tab-pane fade" id="content-exact-dates1" role="tabpanel" aria-labelledby="exact-dates-tab1">
+												<div class="calendar-container">
+												  <button id="prev-month-1" aria-label="Previous Month" class="nav-btn">&#x2039;</button>
+												  <div class="calendars-wrapper">
+													<div id="calendar-1-1" class="calendar-month"></div>
+													<div class="divider"></div>
+													<div id="calendar-2-1" class="calendar-month"></div>
+												  </div>
+												  <button id="next-month-1" aria-label="Next Month" class="nav-btn">&#x203A;</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<div class="custom-form-wrapper m-2">
+								  <div class="custom-form position-relative d-flex align-items-center">
+									<input type="text" class="form-control custom-input" id="visitorselect" placeholder=" " required>
+									<label for="visitorselect" class="custom-label">Επισκέπτες</label>
+									<span class="info-icon"><i class="fa fa-users"></i></span>
+								  </div>
+								  <div class="dropdown-panel panel7" aria-hidden="true">
+									<div class="room-block">
+										<p class="dropdown-title mb-3">Δωμάτιο 1</p>
+										<div class="visitor-frame d-flex justify-content-between align-items-center">
+										  <div class="visitor-labels d-flex flex-column">
+											<p class="visitor-type">Ενήλικες</p>
+											<p class="visitor-note">16+ ετών</p>
+										  </div>
+										  <div class="visitor-controls d-flex align-items-center">
+											<button class="count-btn minus" type="button">−</button>
+											<span class="count-num">0</span>
+											<button class="count-btn plus" type="button">+</button>
+										  </div>
+										</div>
+										<div class="visitor-frame d-flex justify-content-between align-items-center">
+										  <div class="visitor-labels d-flex flex-column">
+											<p class="visitor-type">Παιδιά</p>
+											<p class="visitor-note">2–15 ετών</p>
+										  </div>
+										  <div class="visitor-controls d-flex align-items-center">
+											<button class="count-btn minus" type="button">−</button>
+											<span class="count-num">0</span>
+											<button class="count-btn plus" type="button">+</button>
+										  </div>
+										</div>
+										<div class="visitor-frame d-flex justify-content-between align-items-center">
+										  <div class="visitor-labels d-flex flex-column">
+											<p class="visitor-type">Βρέφη</p>
+											<p class="visitor-note">Κάτω των 2 ετών</p>
+										  </div>
+										  <div class="visitor-controls d-flex align-items-center">
+											<button class="count-btn minus" type="button">−</button>
+											<span class="count-num">0</span>
+											<button class="count-btn plus" type="button">+</button>
+										  </div>
+										</div>
+									</div>
+									<div class="more-btn mt-3">Προσθηκη δωματίου</div>
+								  </div>
+								</div>
+								
+								<div class="m-2">
+									<button type="submit">ΑΝΑΖΗΤΗΣΗ</button>
+								</div>
+							</div>
+						</div>
+					  </div>
+					</section>
+
+
+					
+					<!-- date selection -->
+					<div class="date-wrapper my-5">
+						<div class="date-option">
+							<div class="button-wrapper">
+								<button class="button" style="background: white;">
+										<div class="top-text">ΤΕΤ 12 ΦΕΒ 2025</div>
+										<div class="middle-text">Από</div>
+										<div class="bottom-text">€ 1399</div>
+								</button>
+							</div>
+							<div class="button-wrapper">	
+								<button class="button" style="background: white;">
+										<div class="top-text">ΤΕΤ 12 ΦΕΒ 2025</div>
+										<div class="middle-text">Από</div>
+										<div class="bottom-text">€ 1399</div>
+								</button>
+							</div>
+							<div class="button-wrapper">	
+								<button class="button" style="background: white;">
+										<div class="top-text">ΤΕΤ 12 ΦΕΒ 2025</div>
+										<div class="middle-text">Από</div>
+										<div class="bottom-text">€ 1399</div>
+								</button>
+							</div>
+							<div class="button-wrapper">	
+								<button class="button" style="background: white;">
+										<div class="top-text">ΤΕΤ 12 ΦΕΒ 2025</div>
+										<div class="middle-text">Από</div>
+										<div class="bottom-text">€ 1399</div>
+								</button>
+							</div>
+							<div class="button-wrapper">	
+								<button class="button" style="background: white;">
+										<div class="top-text">ΤΕΤ 12 ΦΕΒ 2025</div>
+										<div class="middle-text">Από</div>
+										<div class="bottom-text">€ 1399</div>
+								</button>
+							</div>
+							<div class="button-wrapper">	
+								<button class="button" style="background: white;">
+										<div class="top-text">ΤΕΤ 12 ΦΕΒ 2025</div>
+										<div class="middle-text">Από</div>
+										<div class="bottom-text">€ 1399</div>
+								</button>
+							</div>
+						</div>
+						<div class="week-change-option">
+							<button class="week-change-button" style="background: none; color:#666767">
+								<i class="fa fa-angle-left" style="color:#f65421"></i> <span>Νωριτερα</span>
+							</button>
+							<button class="week-change-button" style="background: none; color:#666767">
+								<span>αργοτερα</span> <i class="fa fa-angle-right" style="color:#f65421"></i> 
+							</button>
+						</div>
+					</div>
+					
+					<div class="row d-flex justify-content-center justify-content-md-start">
+						<div class="col-12 col-xxl-3 col-md-6 mb-4 d-flex justify-content-center">
+							<div class="card" style="height:670px;">
+								<div class="card-front">
+									<div class="card-image">
+										<img src="./assets/img/twobed.png" alt="">
+										<div class="deal">Προσφορά -15%</div>
+									</div>
+									<div class="card-content">
+										<div class="group">Δίκλινο Δωμάτιο με Θέα Πήλιο (extra bed)</div>
+										<div class="destination-details">
+											<ul>
+												<li><img src="./assets/img/bed-i.svg" alt="">Διπλό κρεβάτι</li>
+												<li><img src="./assets/img/clock.svg" alt="">3 διανυκτερεύσεις</li>
+												<li><img src="./assets/img/people-i.svg" alt="">2 άτομα + 1 παιδί</li>
+												<li><img src="./assets/img/tag-i.svg" alt=""> Δωρεάν ακύρωση &nbsp;&nbsp;<img src="./assets/img/info.svg" alt=""></li>
+												<li><img src="./assets/img/dine.svg" alt="">Πρωινό + Ημιδιατροφή</li>
+											</ul>
+										</div>
+										<div class="card-btns2">
+											<hr class="w-100 mt-3" style="border-top: 1px solid #1e1e1e3b;">
+											<div class="price-text-group">
+											  <div class="price-info">
+												<h2>€ 900</h2>
+												<img src="./assets/img/info.svg" alt="info icon" />
+											  </div>
+											</div>
+											<a href="#">κρατηση</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xxl-3 col-md-6 mb-4 d-flex justify-content-center">
+							<div class="card" style="height:670px;">
+								<div class="card-front">
+									<div class="card-image">
+										<img src="./assets/img/twobed.png" alt="">
+										<div class="deal">Προσφορά -15%</div>
+									</div>
+									<div class="card-content">
+										<div class="group">Δίκλινο Δωμάτιο με Θέα Πήλιο (extra bed)</div>
+										<div class="destination-details">
+											<ul>
+												<li><img src="./assets/img/bed-i.svg" alt="">Διπλό κρεβάτι</li>
+												<li><img src="./assets/img/clock.svg" alt="">3 διανυκτερεύσεις</li>
+												<li><img src="./assets/img/people-i.svg" alt="">2 άτομα + 1 παιδί</li>
+												<li><img src="./assets/img/tag-i.svg" alt=""> Δωρεάν ακύρωση &nbsp;&nbsp;<img src="./assets/img/info.svg" alt=""></li>
+												<li><img src="./assets/img/dine.svg" alt="">Πρωινό + Ημιδιατροφή</li>
+											</ul>
+										</div>
+										<div class="card-btns2">
+											<hr class="w-100 mt-3" style="border-top: 1px solid #1e1e1e3b;">
+											<div class="price-text-group">
+											  <div class="price-info">
+												<h2>€ 900</h2>
+												<img src="./assets/img/info.svg" alt="info icon" />
+											  </div>
+											</div>
+											<a href="#">κρατηση</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xxl-3 col-md-6 mb-4 d-flex justify-content-center">
+							<div class="card" style="height:670px;">
+								<div class="card-front">
+									<div class="card-image">
+										<img src="./assets/img/twobed.png" alt="">
+										<div class="deal">Προσφορά -15%</div>
+									</div>
+									<div class="card-content">
+										<div class="group">Δίκλινο Δωμάτιο με Θέα Πήλιο (extra bed)</div>
+										<div class="destination-details">
+											<ul>
+												<li><img src="./assets/img/bed-i.svg" alt="">Διπλό κρεβάτι</li>
+												<li><img src="./assets/img/clock.svg" alt="">3 διανυκτερεύσεις</li>
+												<li><img src="./assets/img/people-i.svg" alt="">2 άτομα + 1 παιδί</li>
+												<li><img src="./assets/img/tag-i.svg" alt=""> Δωρεάν ακύρωση &nbsp;&nbsp;<img src="./assets/img/info.svg" alt=""></li>
+												<li><img src="./assets/img/dine.svg" alt="">Πρωινό + Ημιδιατροφή</li>
+											</ul>
+										</div>
+										<div class="card-btns2">
+											<hr class="w-100 mt-3" style="border-top: 1px solid #1e1e1e3b;">
+											<div class="price-text-group">
+											  <div class="price-info">
+												<h2>€ 900</h2>
+												<img src="./assets/img/info.svg" alt="info icon" />
+											  </div>
+											</div>
+											<a href="#">κρατηση</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xxl-3 col-md-6 mb-4 d-flex justify-content-center">
+							<div class="card" style="height:670px;">
+								<div class="card-front">
+									<div class="card-image">
+										<img src="./assets/img/twobed.png" alt="">
+										<div class="deal">Προσφορά -15%</div>
+									</div>
+									<div class="card-content">
+										<div class="group">Δίκλινο Δωμάτιο με Θέα Πήλιο (extra bed)</div>
+										<div class="destination-details">
+											<ul>
+												<li><img src="./assets/img/bed-i.svg" alt="">Διπλό κρεβάτι</li>
+												<li><img src="./assets/img/clock.svg" alt="">3 διανυκτερεύσεις</li>
+												<li><img src="./assets/img/people-i.svg" alt="">2 άτομα + 1 παιδί</li>
+												<li><img src="./assets/img/tag-i.svg" alt=""> Δωρεάν ακύρωση &nbsp;&nbsp;<img src="./assets/img/info.svg" alt=""></li>
+												<li><img src="./assets/img/dine.svg" alt="">Πρωινό + Ημιδιατροφή</li>
+											</ul>
+										</div>
+										<div class="card-btns2">
+											<hr class="w-100 mt-3" style="border-top: 1px solid #1e1e1e3b;">
+											<div class="price-text-group">
+											  <div class="price-info">
+												<h2>€ 900</h2>
+												<img src="./assets/img/info.svg" alt="info icon" />
+											  </div>
+											</div>
+											<a href="#">κρατηση</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xxl-3 col-md-6 mb-4 d-flex justify-content-center">
+							<div class="card" style="height:670px;">
+								<div class="card-front">
+									<div class="card-image">
+										<img src="./assets/img/twobed.png" alt="">
+										<div class="deal">Προσφορά -15%</div>
+									</div>
+									<div class="card-content">
+										<div class="group">Δίκλινο Δωμάτιο με Θέα Πήλιο (extra bed)</div>
+										<div class="destination-details">
+											<ul>
+												<li><img src="./assets/img/bed-i.svg" alt="">Διπλό κρεβάτι</li>
+												<li><img src="./assets/img/clock.svg" alt="">3 διανυκτερεύσεις</li>
+												<li><img src="./assets/img/people-i.svg" alt="">2 άτομα + 1 παιδί</li>
+												<li><img src="./assets/img/tag-i.svg" alt=""> Δωρεάν ακύρωση &nbsp;&nbsp;<img src="./assets/img/info.svg" alt=""></li>
+												<li><img src="./assets/img/dine.svg" alt="">Πρωινό + Ημιδιατροφή</li>
+											</ul>
+										</div>
+										<div class="card-btns2">
+											<hr class="w-100 mt-3" style="border-top: 1px solid #1e1e1e3b;">
+											<div class="price-text-group">
+											  <div class="price-info">
+												<h2>€ 900</h2>
+												<img src="./assets/img/info.svg" alt="info icon" />
+											  </div>
+											</div>
+											<a href="#">κρατηση</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="col-12 col-xxl-3 col-md-6 mb-4 d-flex justify-content-center">
+							<div class="card" style="height:670px;">
+								<div class="card-front">
+									<div class="card-image">
+										<img src="./assets/img/twobed.png" alt="">
+										<div class="deal">Προσφορά -15%</div>
+									</div>
+									<div class="card-content">
+										<div class="group">Δίκλινο Δωμάτιο με Θέα Πήλιο (extra bed)</div>
+										<div class="destination-details">
+											<ul>
+												<li><img src="./assets/img/bed-i.svg" alt="">Διπλό κρεβάτι</li>
+												<li><img src="./assets/img/clock.svg" alt="">3 διανυκτερεύσεις</li>
+												<li><img src="./assets/img/people-i.svg" alt="">2 άτομα + 1 παιδί</li>
+												<li><img src="./assets/img/tag-i.svg" alt=""> Δωρεάν ακύρωση &nbsp;&nbsp;<img src="./assets/img/info.svg" alt=""></li>
+												<li><img src="./assets/img/dine.svg" alt="">Πρωινό + Ημιδιατροφή</li>
+											</ul>
+										</div>
+										<div class="card-btns2">
+											<hr class="w-100 mt-3" style="border-top: 1px solid #1e1e1e3b;">
+											<div class="price-text-group">
+											  <div class="price-info">
+												<h2>€ 900</h2>
+												<img src="./assets/img/info.svg" alt="info icon" />
+											  </div>
+											</div>
+											<a href="#">κρατηση</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- avalaible -->
+	
+    <!-- Destination -->
+    <section class="destination">
+        <div class="inner-destination">
+            <div class="container">
+                <div class="row justify-content-center align-items-start p-3 min-vh-100">
+                    <div class="col-12">
+                        <div class="section-title">
+                            <h2>Άλλα ξενοδοχεία</h2>
+                        </div>
+                    </div>
+                    <div class="col-12 col-xxl-3 col-md-6 mb-4">
+                        <div class="card card2">
+							<div class="card-front">
+								<div class="card-image">
+								  <img src="./assets/img/hotel-img1.png" alt="">
+								  <div class="hover-taxes">
+									<div class="taxes">Χωρίς δυνατότητα ακύρωσης</div>
+								  </div>
+
+								  <div class="hover-from">
+									<div class="from">
+									  <h6 class="text-center mb-1 fw-light">Από</h6>€ 900
+									</div>
+								  </div>
+								</div>
+								<div class="card-content">
+								  <div class="normal-view">
+									<div class="central">Καμενα βουρλα</div>
+									<div class="group">Mitsis Galini Wellness Spa & Resort 5* </div>
+									<div class="destination-details ">
+										<ul>
+											<li><img src="./assets/img/clock.svg" alt="">2 ημέρες / 1 διανυκτέρευση</li>
+											<li><img src="./assets/img/calender.svg" alt=""><span class="limit-lines-hidden">30/04/2025 Αγίου Πνεύματος</span></li>
+											<li><img src="./assets/img/calender.svg" alt=""><span class="uppercase-bold">εναλλακτικες ημερομηνίες</span></li>
+											<li>
+											  <img src="./assets/img/person.svg" alt="">
+											  <div class="text-container">2 άτομα + 1 παιδί + 
+												<button class="text-button">Άλλες επιλογές</button>
+											  </div>
+											</li>
+											<li><img src="./assets/img/utensil.svg" alt="">
+											  <div class="text-container">Ημιδιατροφή + 
+												<button class="text-button">Άλλες επιλογές</button>
+											  </div>
+											</li>
+											<li><img src="./assets/img/calender.svg" alt="">Εορταστικό πρόγραμμα, Πασχαλινό γεύμα</li>
+											<li><img src="./assets/img/calender.svg" alt="">Παιδική απασχόληση</li>
+										</ul>
+										<!-- gray line -->
+									<hr class="w-100 mt-3" style="border-top: 1px solid #1e1e1e3b;">
+									</div>
+									<div class="card-btns">
+										<div class="price-text-group">
+										<h3>Από</h3>
+										  <div class="price-info">
+											<h2>€ 900</h2>
+											<img src="./assets/img/info.svg" alt="info icon" />
+										  </div>
+										</div>
+										<a href="#">Περισσότερα</a>
+									</div>
+								  </div>
+								  <div class="hover-view">
+									<label>
+										<i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i>
+										<span class="vertical-line-divider"></span>
+										<i class="fa fa-tripadvisor tripadvisor-icon"></i> <i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle-thin tripadvisor-circle-icon"></i>
+									</label>
+									<div class="central">Βαρκελώνη</div>
+									<div class="group">Europark</div>
+									<p>0,4 χλμ από το κέντρο</p>
+									<div class="taxes">Με φόρους αεροδρομίου</div>
+									<div class="destination-details">
+										<ul>
+											<li><img src="./assets/img/plane.svg" alt="">ATH - BCN</li>
+											<div class="icon-text">
+											  <img src="./assets/img/calender.svg" alt="" />
+											  <div class="texts">
+												<p style="color: #0468EB;">3 νύχτες</p>
+												<p>15.05.25 - 18.05.25</p>
+											  </div>
+											</div>
+										</ul>
+									</div>
+									<div class="card-btns">
+										<a href="#">Περισσότερα</a>
+									</div>
+								  </div>
+								  <div class="card-details-btns">
+									<div class="more-btn"><a href="#" class="toggle-view-btn" onclick="event.preventDefault();">Δείτε τι περιλαμβάνει <img src="./assets/img/plus.svg" alt=""></a></div>
+								  </div>
+								</div>
+							</div>
+							<div class="card-back">
+								<div class="card-content">
+								  <div class="destination-details">
+									<ul>
+										<li><img src="./assets/img/utensil.svg" alt="">Πρωινό</li>
+										<li><img src="./assets/img/person.svg" alt="">3 άτομα, 2 δωμάτια</li>
+										<li><img src="./assets/img/hotel.svg" alt="">Δίκλινο δωμάτιο</li>
+									    <li><img src="./assets/img/clock.svg" alt="">3x σακίδια πλάτης</li>
+									</ul>
+								  </div>
+								  <div class="card-details-btns">
+									<div class="more-btn">
+									  <a href="#" class="toggle-card">Κλείσιμο <img src="./assets/img/minus.svg" alt=""></a>
+									</div>
+								  </div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+					
+                    <div class="col-12 col-xxl-3 col-md-6 mb-4 d-flex justify-content-center">
+                       <div class="card card2">
+							<div class="card-front">
+								<div class="card-image">
+								  <img src="./assets/img/hotel-img2.png" alt="">
+								  <div class="hover-taxes">
+									<div class="taxes">Χωρίς δυνατότητα ακύρωσης</div>
+								  </div>
+
+								  <div class="hover-from">
+									<div class="from">
+									  <h6 class="text-center mb-1 fw-light">Από</h6>€ 900
+									</div>
+								  </div>
+								</div>
+								<div class="card-content">
+								  <div class="normal-view">
+									<div class="central">Καμενα βουρλα</div>
+									<div class="group">Mitsis Galini Wellness Spa & Resort 5* </div>
+									<div class="destination-details">
+										<ul>
+											<li><img src="./assets/img/clock.svg" alt="">2 ημέρες / 1 διανυκτέρευση</li>
+											<li><img src="./assets/img/calender.svg" alt=""><span class="limit-lines-hidden">30/04/2025 Αγίου Πνεύματος</span></li>
+											<li><img src="./assets/img/calender.svg" alt=""><span class="uppercase-bold">εναλλακτικες ημερομηνίες</span></li>
+											<li>
+											  <img src="./assets/img/person.svg" alt="">
+											  <div class="text-container">2 άτομα + 1 παιδί + 
+												<button class="text-button">Άλλες επιλογές</button>
+											  </div>
+											</li>
+											<li><img src="./assets/img/utensil.svg" alt="">
+											  <div class="text-container">Ημιδιατροφή + 
+												<button class="text-button">Άλλες επιλογές</button>
+											  </div>
+											</li>
+											<li><img src="./assets/img/calender.svg" alt="">Εορταστικό πρόγραμμα, Πασχαλινό γεύμα</li>
+											<li><img src="./assets/img/calender.svg" alt="">Παιδική απασχόληση</li>
+										</ul>
+										<!-- gray line -->
+									<hr class="w-100 mt-3" style="border-top: 1px solid #1e1e1e3b;">
+									</div>
+									
+									<div class="card-btns">
+										<div class="price-text-group">
+										<h3>Από</h3>
+										  <div class="price-info">
+											<h2>€ 900</h2>
+											<img src="./assets/img/info.svg" alt="info icon" />
+										  </div>
+										</div>
+										<a href="#">Περισσότερα</a>
+									</div>
+								  </div>
+								  <div class="hover-view">
+									<label>
+										<i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i>
+										<span class="vertical-line-divider"></span>
+										<i class="fa fa-tripadvisor tripadvisor-icon"></i> <i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle-thin tripadvisor-circle-icon"></i>
+									</label>
+									<div class="central">Βαρκελώνη</div>
+									<div class="group">Europark</div>
+									<p>0,4 χλμ από το κέντρο</p>
+									<div class="taxes">Με φόρους αεροδρομίου</div>
+									<div class="destination-details">
+										<ul>
+											<li><img src="./assets/img/plane.svg" alt="">ATH - BCN</li>
+											<div class="icon-text">
+											  <img src="./assets/img/calender.svg" alt="" />
+											  <div class="texts">
+												<p style="color: #0468EB;">3 νύχτες</p>
+												<p>15.05.25 - 18.05.25</p>
+											  </div>
+											</div>
+										</ul>
+									</div>
+									<div class="card-btns">
+										<a href="#">Περισσότερα</a>
+									</div>
+								  </div>
+								  <div class="card-details-btns">
+									<div class="more-btn"><a href="#" class="toggle-view-btn" onclick="event.preventDefault();">Δείτε τι περιλαμβάνει <img src="./assets/img/plus.svg" alt=""></a></div>
+								  </div>
+								</div>
+							</div>
+							<div class="card-back">
+								<div class="card-content">
+								  <div class="destination-details">
+									<ul>
+										<li><img src="./assets/img/utensil.svg" alt="">Πρωινό</li>
+										<li><img src="./assets/img/person.svg" alt="">3 άτομα, 2 δωμάτια</li>
+										<li><img src="./assets/img/hotel.svg" alt="">Δίκλινο δωμάτιο</li>
+									    <li><img src="./assets/img/clock.svg" alt="">3x σακίδια πλάτης</li>
+									</ul>
+								  </div>
+								  <div class="card-details-btns">
+									<div class="more-btn">
+									  <a href="#" class="toggle-card">Κλείσιμο <img src="./assets/img/minus.svg" alt=""></a>
+									</div>
+								  </div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+					
+                    <div class="col-12 col-xxl-3 col-md-6 mb-4 d-flex justify-content-center">
+                        <div class="card card2">
+							<div class="card-front">
+								<div class="card-image">
+								  <img src="./assets/img/hotel-img3.png" alt="">
+								  <div class="hover-taxes">
+									<div class="taxes">Χωρίς δυνατότητα ακύρωσης</div>
+								  </div>
+								  <div class="hover-from">
+									<div class="from">
+									  <h6 class="text-center mb-1 fw-light">Από</h6>€ 900
+									</div>
+								  </div>
+								</div>
+								<div class="card-content">
+								  <div class="normal-view">
+									<div class="central">Καμενα βουρλα</div>
+									<div class="group">Mitsis Galini Wellness Spa & Resort 5* </div>
+									<div class="destination-details">
+										<ul>
+											<li><img src="./assets/img/clock.svg" alt="">2 ημέρες / 1 διανυκτέρευση</li>
+											<li><img src="./assets/img/calender.svg" alt=""><span class="limit-lines-hidden">30/04/2025 Αγίου Πνεύματος</span></li>
+											<li><img src="./assets/img/calender.svg" alt=""><span class="uppercase-bold">εναλλακτικες ημερομηνίες</span></li>
+											<li>
+											  <img src="./assets/img/person.svg" alt="">
+											  <div class="text-container">2 άτομα + 1 παιδί + 
+												<button class="text-button">Άλλες επιλογές</button>
+											  </div>
+											</li>
+											<li><img src="./assets/img/utensil.svg" alt="">
+											  <div class="text-container">Ημιδιατροφή + 
+												<button class="text-button">Άλλες επιλογές</button>
+											  </div>
+											</li>
+											<li><img src="./assets/img/calender.svg" alt="">Εορταστικό πρόγραμμα, Πασχαλινό γεύμα</li>
+											<li><img src="./assets/img/calender.svg" alt="">Παιδική απασχόληση</li>
+										</ul>
+										<!-- gray line -->
+									<hr class="w-100 mt-3" style="border-top: 1px solid #1e1e1e3b;">
+									</div>
+									<div class="card-btns">
+										<div class="price-text-group">
+										<h3>Από</h3>
+										  <div class="price-info">
+											<h2>€ 900</h2>
+											<img src="./assets/img/info.svg" alt="info icon" />
+										  </div>
+										</div>
+										<a href="#">Περισσότερα</a>
+									</div>
+								  </div>
+								  <div class="hover-view">
+									<label>
+										<i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i>
+										<span class="vertical-line-divider"></span>
+										<i class="fa fa-tripadvisor tripadvisor-icon"></i> <i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle-thin tripadvisor-circle-icon"></i>
+									</label>
+									<div class="central">Βαρκελώνη</div>
+									<div class="group">Europark</div>
+									<p>0,4 χλμ από το κέντρο</p>
+									<div class="taxes">Με φόρους αεροδρομίου</div>
+									<div class="destination-details">
+										<ul>
+											<li><img src="./assets/img/plane.svg" alt="">ATH - BCN</li>
+											<div class="icon-text">
+											  <img src="./assets/img/calender.svg" alt="" />
+											  <div class="texts">
+												<p style="color: #0468EB;">3 νύχτες</p>
+												<p>15.05.25 - 18.05.25</p>
+											  </div>
+											</div>
+										</ul>
+									</div>
+									<div class="card-btns">
+										<a href="#">Περισσότερα</a>
+									</div>
+								  </div>
+								  <div class="card-details-btns">
+									<div class="more-btn"><a href="#" class="toggle-view-btn" onclick="event.preventDefault();">Δείτε τι περιλαμβάνει <img src="./assets/img/plus.svg" alt=""></a></div>
+								  </div>
+								</div>
+							</div>
+							<div class="card-back">
+								<div class="card-content">
+								  <div class="destination-details">
+									<ul>
+										<li><img src="./assets/img/utensil.svg" alt="">Πρωινό</li>
+										<li><img src="./assets/img/person.svg" alt="">3 άτομα, 2 δωμάτια</li>
+										<li><img src="./assets/img/hotel.svg" alt="">Δίκλινο δωμάτιο</li>
+									    <li><img src="./assets/img/clock.svg" alt="">3x σακίδια πλάτης</li>
+									</ul>
+								  </div>
+								  <div class="card-details-btns">
+									<div class="more-btn">
+									  <a href="#" class="toggle-card">Κλείσιμο <img src="./assets/img/minus.svg" alt=""></a>
+									</div>
+								  </div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+					
+                    <div class="col-12 col-xxl-3 col-md-6 mb-4 d-flex justify-content-center">
+                        <div class="card card2">
+							<div class="card-front">
+								<div class="card-image">
+								  <img src="./assets/img/hotel-img4.png" alt="">
+								  <div class="hover-taxes">
+									<div class="taxes">Χωρίς δυνατότητα ακύρωσης</div>
+								  </div>
+								  <div class="hover-from">
+									<div class="from">
+									  <h6 class="text-center mb-1 fw-light">Από</h6>€ 900
+									</div>
+								  </div>
+								</div>
+								<div class="card-content">
+								  <div class="normal-view">
+									<div class="central">Καμενα βουρλα</div>
+									<div class="group">Mitsis Galini Wellness Spa & Resort 5* </div>
+									<div class="destination-details">
+										<ul>
+											<li><img src="./assets/img/clock.svg" alt="">2 ημέρες / 1 διανυκτέρευση</li>
+											<li><img src="./assets/img/calender.svg" alt=""><span class="limit-lines-hidden">30/04/2025 Αγίου Πνεύματος</span></li>
+											<li><img src="./assets/img/calender.svg" alt=""><span class="uppercase-bold">εναλλακτικες ημερομηνίες</span></li>
+											<li>
+											  <img src="./assets/img/person.svg" alt="">
+											  <div class="text-container">2 άτομα + 1 παιδί + 
+												<button class="text-button">Άλλες επιλογές</button>
+											  </div>
+											</li>
+											<li><img src="./assets/img/utensil.svg" alt="">
+											  <div class="text-container">Ημιδιατροφή + 
+												<button class="text-button">Άλλες επιλογές</button>
+											  </div>
+											</li>
+											<li><img src="./assets/img/calender.svg" alt="">Εορταστικό πρόγραμμα, Πασχαλινό γεύμα</li>
+											<li><img src="./assets/img/calender.svg" alt="">Παιδική απασχόληση</li>
+										</ul>
+										<!-- gray line -->
+									<hr class="w-100 mt-3" style="border-top: 1px solid #1e1e1e3b;">
+									</div>
+									<div class="card-btns">
+										<div class="price-text-group">
+										<h3>Από</h3>
+										  <div class="price-info">
+											<h2>€ 900</h2>
+											<img src="./assets/img/info.svg" alt="info icon" />
+										  </div>
+										</div>
+										<a href="#">Περισσότερα</a>
+									</div>
+								  </div>
+								  <div class="hover-view">
+									<label>
+										<i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i><i class="fa fa-star star-icon"></i>
+										<span class="vertical-line-divider"></span>
+										<i class="fa fa-tripadvisor tripadvisor-icon"></i> <i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle tripadvisor-circle-icon"></i><i class="fa fa-circle-thin tripadvisor-circle-icon"></i>
+									</label>
+									<div class="central">Βαρκελώνη</div>
+									<div class="group">Europark</div>
+									<p>0,4 χλμ από το κέντρο</p>
+									<div class="taxes">Με φόρους αεροδρομίου</div>
+									<div class="destination-details">
+										<ul>
+											<li><img src="./assets/img/plane.svg" alt="">ATH - BCN</li>
+											<div class="icon-text">
+											  <img src="./assets/img/calender.svg" alt="" />
+											  <div class="texts">
+												<p style="color: #0468EB;">3 νύχτες</p>
+												<p>15.05.25 - 18.05.25</p>
+											  </div>
+											</div>
+										</ul>
+									</div>
+									<div class="card-btns">
+										<a href="#">Περισσότερα</a>
+									</div>
+								  </div>
+								  <div class="card-details-btns">
+									<div class="more-btn"><a href="#" class="toggle-view-btn" onclick="event.preventDefault();">Δείτε τι περιλαμβάνει <img src="./assets/img/plus.svg" alt=""></a></div>
+								  </div>
+								</div>
+							</div>
+							<div class="card-back">
+								<div class="card-content">
+								  <div class="destination-details">
+									<ul>
+										<li><img src="./assets/img/utensil.svg" alt="">Πρωινό</li>
+										<li><img src="./assets/img/person.svg" alt="">3 άτομα, 2 δωμάτια</li>
+										<li><img src="./assets/img/hotel.svg" alt="">Δίκλινο δωμάτιο</li>
+									    <li><img src="./assets/img/clock.svg" alt="">3x σακίδια πλάτης</li>
+									</ul>
+								  </div>
+								  <div class="card-details-btns">
+									<div class="more-btn">
+									  <a href="#" class="toggle-card">Κλείσιμο <img src="./assets/img/minus.svg" alt=""></a>
+									</div>
+								  </div>
+								</div>
+							</div>
+                        </div>
+                    </div>
+				
+					<div class="pagination-controls text-center my-4">
+					  <button class="pagination-arrow prev" aria-label="Previous">
+						<i class="fa fa-chevron-left chevron-icon"></i>
+					  </button>
+					  <div class="pagination-dots d-inline-block mx-2">
+						<span class="dot active"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+						<span class="dot"></span>
+					  </div>
+					  <button class="pagination-arrow next" aria-label="Next">
+						<i class="fa fa-chevron-right chevron-icon"></i>
+					  </button>
+					</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Destination -->
+	
+    <!-- Footer -->
+    <footer>
+        <div class="inner-footer">
+            <div class="conatiner">
+                <div class="row">
+                    <div class="col-12 col-md-3">
+                        <div class="footer-widget">
+                            <h3>εξυπηρετηση πελατων</h3>
+                            <div class="icon-box">
+                                <div class="icon"><img src="./assets/img/phone.svg" alt=""></div>
+                                <div class="content">
+                                    <h6>Τηλ επικοινωνίας</h6>
+                                    <a href="tel:+302102241152">+30 2102241152</a>
+                                </div>
+                            </div>
+                            <div class="icon-box">
+                                <div class="icon"><img src="./assets/img/envelop.svg" alt=""></div>
+                                <div class="content">
+                                    <h6>Email επικοινωνίας</h6>
+                                    <a href="mailto:info@travelone.gr">info@travelone.gr</a>
+                                </div>
+                            </div>
+                            <div class="icon-box">
+                                <div class="icon"><img src="./assets/img/clock-f.svg" alt=""></div>
+                                <div class="content">
+                                    <h6>Ώρες λειτουργίας</h6>
+                                    <p>Δευτέρα έως Παρασκευή:<br>
+                                        10:30 έως 18:00</p>
+                                    <p>Σαββάτο : 10:30 έως 14:00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-5">
+                        <div class="footer-widget">
+                            <h3>μεινετε ενημερωμενοι</h3>
+                            <h4>Μοναδικές ταξιδιωτικές ευκαιρίες!</h4>
+                            <p>Ανακαλύψτε νέους προορισμούς, ταξιδιωτικά νέα, διαγωνισμούς και χρήσιμες συμβουλές για το επόμενο ταξίδι σας.</p>
+                            <br>
+                            <a class="cs-btn-foo" href="#">εγγραφη</a>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="footer-widget">
+                        <h3>ακολουθησε μασ</h3>
+                        <ul>
+                            <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-youtube-play"></i></a></li>
+                            <li><a href="#"><img src="./assets/img/tiktok.svg" alt=""></a></li>
+                            <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        </ul>
+                    </div>
+                    </div>
+                    <hr>
+                    <div class="col-12 col-md-4">
+                        <div class="footer-img-box">
+                            <img src="./assets/img/1c.svg" alt="">
+                            <h3>100+ προορισμοί</h3>
+                            <p>Η έμπειρη ομάδα μας επέλεξε μοναδικούς προορισμούς αποκλειστικά για εσάς.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="footer-img-box">
+                            <img src="./assets/img/2c.svg" alt="">
+                            <h3>Εγγύηση καλύτερης τιμής</h3>
+                            <p>Δίνουμε αξία στα χρήματά σας εξασφαλίζοντας την οικονομικότερη δυνατή τιμή για όλα μας τα πακέτα.</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="footer-img-box">
+                            <img src="./assets/img/3c.svg" alt="">
+                            <h3>Υποστήριξη</h3>
+                            <p>Είμαστε εδώ για να σας βοηθήσουμε, πριν, κατά τη διάρκεια, ακόμα και μετά το ταξίδι σας.</p>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-12 col-md-12">
+                        <div class="footer-menu-box">
+                            <ul>
+                                <li><a href="#">Χρήσιμα</a></li>
+                                <li><a href="#">Είδη ταξιδιού</a></li>
+                                <li><a href="#">Περίοδος</a></li>
+                                <li><a href="#">Προορισμοί</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="col-12 col-md-12">
+                        <div class="footer-menu-box-bottom">
+                            <ul>
+                                <li><a href="#">Σχετικά με εμάς</a></li>
+                                <li><a href="#">Τρόποι πληρωμής</a></li>
+                                <li><a href="#">Συχνές ερωτήσεις</a></li>
+                                <li><a href="#">Όροι & Προυποθέσεις</a></li>
+                                <li><a href="#">Πολιτική απορρήτου</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom-area">
+            <div class="conatiner">
+                <div class="row">
+                    <div class="col-12 col-md-4">
+                        <div class="footer-bottom-widget">
+                        <img src="./assets/img/footer.svg" alt="">
+                        <p>GNTO: 0259E70000775801</p>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="footer-bottom-widget-cr">
+                        <h6>© 2025 Travelone. All rights reserved.</h6>
+                        <span>Διαχείριση cookies</span>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4">
+                        <div class="footer-bottom-widget-payment">
+                        <h6>Τρόποι πληρωμής</h6>
+                        <img src="./assets/img/payment.svg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer -->
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+    <script>
+        function switchTab(button, tabId) {
+          // Remove active class from all buttons
+          document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+          button.classList.add('active');
+      
+          // Hide all tab content boxes
+          document.querySelectorAll('.tab-content-box').forEach(tab => tab.classList.add('d-none'));
+      
+          // Show selected tab content
+          document.getElementById(tabId).classList.remove('d-none');
+        }
+
+        // 
+
+        // JavaScript
+        function toggleDropdown() {
+        const dropdown = document.getElementById("contactDropdown");
+        dropdown.style.display = dropdown.style.display === "block" ? "none" : "block";
+        }
+
+        // JavaScript
+        document.addEventListener("DOMContentLoaded", function () {
+            var buttons = document.querySelectorAll(".toggle-btn");
+
+            buttons.forEach(function (btn) {
+                btn.addEventListener("click", function () {
+                    var msgBox = this.previousElementSibling; // get the .divMsg before the button
+                    if (msgBox && msgBox.classList.contains("divMsg")) {
+                        if (msgBox.style.display === "block") {
+                            msgBox.style.display = "none";
+                            this.value = "More info";
+                        } else {
+                            msgBox.style.display = "block";
+                            this.value = "Hide info";
+                        }
+                    }
+                });
+            });
+        });
+      </script>
+
+      
+    <script>
+        function scrollTabs(distance) {
+          const slider = document.querySelector('.tab-slider');
+          slider.scrollBy({ left: distance, behavior: 'smooth' });
+        }
+      </script>
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+
+<!-- JavaScript for more text -->
+<script>
+  document.getElementById('more-btn').addEventListener('click', function() {
+    document.getElementById('extra-content').style.display = 'block';
+    this.style.display = 'none'; // Hide the Περισσότερα button
+  });
+</script>	
+
+<!-- JavaScript for search -->
+<script>
+// Toggle search bar expansion
+const searchWrapper = document.querySelector('.search-inline-wrapper');
+const searchIcon = document.querySelector('.search-inline-icon');
+const searchInput = document.querySelector('.search-inline-input');
+        
+searchIcon.addEventListener('click', function(e) {
+            e.stopPropagation();
+            searchWrapper.classList.toggle('active');
+            if (searchWrapper.classList.contains('active')) {
+                searchInput.focus();
+            }
+});
+        
+// Close search when clicking outside
+document.addEventListener('click', function(e) {
+            if (!searchWrapper.contains(e.target)) {
+                searchWrapper.classList.remove('active');
+            }
+});
+        
+// Prevent closing when clicking inside search
+searchInput.addEventListener('click', function(e) {
+            e.stopPropagation();
+});
+        
+// Toggle dropdown
+function toggleDropdown() {
+            const dropdown = document.getElementById('contactDropdown');
+            dropdown.classList.toggle('active');
+}
+        
+// Close dropdown when clicking outside
+document.addEventListener('click', function(e) {
+            const dropdown = document.getElementById('contactDropdown');
+            const contact = document.querySelector('.navbar__contact');
+            
+            if (!contact.contains(e.target) && !dropdown.contains(e.target)) {
+                dropdown.classList.remove('active');
+            }
+});
+</script>
+
+	<!-- JavaScript for card "flip" -->
+<script>
+document.querySelectorAll('.card').forEach(card => {
+  card.addEventListener('click', function(e) {
+    // Check if toggle forward button was clicked
+    if (e.target.closest('.toggle-view-btn')) {
+      e.preventDefault();
+      card.classList.add('show-back');
+    }
+
+    // Check if back button was clicked
+    if (e.target.closest('.toggle-card')) {
+      e.preventDefault();
+      card.classList.remove('show-back');
+    }
+  });
+});
+</script>
+
+	<!-- JavaScript for pagination -->
+<script>
+document.querySelectorAll('.pagination-controls').forEach(pagination => {
+  const dots = pagination.querySelectorAll('.pagination-dots .dot');
+  let current = 0;
+
+  const prevBtn = pagination.querySelector('.pagination-arrow.prev');
+  const nextBtn = pagination.querySelector('.pagination-arrow.next');
+
+  function updateDots() {
+    dots.forEach((dot, i) => {
+      dot.classList.toggle('active', i === current);
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % dots.length;
+    updateDots();
+  });
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + dots.length) % dots.length;
+    updateDots();
+  });
+
+  updateDots(); // initialize dots on load
+});
+
+</script>
+
+<!-- Bootstrap 5 JS dependencies (make sure these are included in your page!) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-zDqfKgyjcuFss57Gxeyx9ZWVVcfKcmjuTrnlsPqNuVrPrG8Z35dC3l6n20ImY61d" crossorigin="anonymous"></script>
+
+
+	
+<!-- JavaScript for popup -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const overlay = document.getElementById('popupOverlay');
+
+  // Open popup and show overlay
+  document.querySelectorAll('button[data-popup]').forEach(button => {
+    button.addEventListener('click', () => {
+      const popupId = button.getAttribute('data-popup');
+      const popup = document.getElementById(popupId);
+      if (popup) {
+        popup.classList.add('active');
+        overlay.classList.add('active');
+      }
+    });
+  });
+
+  // Close popup and hide overlay on close button click
+  document.querySelectorAll('.popup-slide-right .popup-close-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const popup = btn.closest('.popup-slide-right');
+      popup.classList.remove('active');
+
+      // Hide overlay if no popups are open
+      if (document.querySelectorAll('.popup-slide-right.active').length === 0) {
+        overlay.classList.remove('active');
+      }
+    });
+  });
+
+  // Close popup and hide overlay on overlay click
+  overlay.addEventListener('click', () => {
+    // Close all active popups
+    document.querySelectorAll('.popup-slide-right.active').forEach(popup => {
+      popup.classList.remove('active');
+    });
+    overlay.classList.remove('active');
+  });
+});
+
+</script>
+
+<div class="popup-overlay" id="popupOverlay"></div>
+
+<div class="popup-slide-right" id="popup1">
+  <div class="popup-header">
+    <div class="popup-title">Έξτρα παροχές</div>
+    <button class="popup-close-btn" aria-label="Close popup">×</button>
+  </div>
+  <div class="tour-summary popup-content">
+    <div class="container">
+      <div class="row">
+        <div class="col-6">
+          <div class="hotel-extra-services">
+            <i class="fa fa-language"></i>
+            <h4>Πολύγλωσσο προσωπικό</h4>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="hotel-extra-services">
+            <i class="fa fa-taxi"></i>
+            <h4>Ταξί στο αεροδρόμιο</h4>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="hotel-extra-services">
+            <i class="fa fa-square"></i>
+            <h4>Χρηματοκιβώτιο</h4>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="hotel-extra-services">
+            <i class="fa fa-wheelchair"></i>
+            <h4>Πρόσβαση για ΑΜΕΑ</h4>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="hotel-extra-services">
+            <i class="fa fa-tint"></i>
+            <h4>Εξωτερική πισίνα</h4>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="hotel-extra-services">
+            <i class="fa fa-bicycle"></i>
+            <h4>Ποδήλατο</h4>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="hotel-extra-services">
+            <i class="fa fa-coffee"></i>
+            <h4>Καφετέρια</h4>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="hotel-extra-services">
+            <i class="fa fa-wifi"></i>
+            <h4>Internet</h4>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="hotel-extra-services">
+            <i class="fa fa-cutlery"></i>
+            <h4>Εστιατόριο</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+<!-- js to toggle on focus/blur: -->
+<script>
+document.querySelectorAll('.custom-form-wrapper').forEach(wrapper => {
+  const input = wrapper.querySelector('input.custom-input');
+  const panel = wrapper.querySelector('.dropdown-panel');
+
+  // Show dropdown
+  input.addEventListener('focus', () => {
+    showPanel();
+  });
+  input.addEventListener('click', (e) => {
+    e.stopPropagation();
+    showPanel();
+  });
+
+  function showPanel() {
+  // Close all other open panels first
+  document.querySelectorAll('.dropdown-panel.show').forEach(otherPanel => {
+    if (otherPanel !== panel) {
+      otherPanel.classList.remove('show');
+      otherPanel.setAttribute('aria-hidden', 'true');
+    }
+  });
+  panel.classList.add('show');
+  panel.setAttribute('aria-hidden', 'false');
+  if (panel.classList.contains('panel7')) {
+      updateVisitorInput(); // Only show while open
+    }
+  }
+
+  // Prevent closing when clicking inside
+  panel.addEventListener('click', e => {
+    e.stopPropagation();
+  });
+
+  // Handle dropdown-item clicks
+  const items = panel.querySelectorAll('.dropdown-item');
+  if (items.length) {
+    items.forEach(item => {
+      item.addEventListener('click', () => {
+        input.value = item.textContent.trim();
+        closePanel();
+      });
+    });
+  }
+
+  // Update Επισκέπτες input live, but only when panel is visible
+  if (panel.classList.contains('panel7')) {
+    const visitorFrames = panel.querySelectorAll('.visitor-frame');
+
+    function updateVisitorInput() {
+      if (!panel.classList.contains('show')) return;
+
+      const parts = [];
+      visitorFrames.forEach(frame => {
+        const type = frame.querySelector('.visitor-type').textContent.trim();
+        const count = parseInt(frame.querySelector('.count-num').textContent);
+        parts.push(`${type}: ${count}`);
+      });
+      input.value = parts.join(', ');
+    }
+
+    panel.querySelectorAll('.count-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const countEl = btn.parentElement.querySelector('.count-num');
+        let count = parseInt(countEl.textContent);
+
+        if (btn.classList.contains('plus')) {
+          countEl.textContent = count + 1;
+        } else if (btn.classList.contains('minus') && count > 0) {
+          countEl.textContent = count - 1;
+        }
+
+        updateVisitorInput();
+      });
+    });
+  }
+
+  function closePanel() {
+    panel.classList.remove('show');
+    panel.setAttribute('aria-hidden', 'true');
+  }
+});
+
+// Close dropdowns when clicking outside
+document.addEventListener('click', () => {
+  document.querySelectorAll('.dropdown-panel.show').forEach(panel => {
+    panel.classList.remove('show');
+    panel.setAttribute('aria-hidden', 'true');
+  });
+});
+</script>
+
+<!-- js for panel3 -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  for (let i = 1; i <= 3; i++) {
+    const fullMonthBtn = document.getElementById(`full-month-tab${i}`);
+    const exactDatesBtn = document.getElementById(`exact-dates-tab${i}`);
+    const fullMonthContent = document.getElementById(`content-full-month${i}`);
+    const exactDatesContent = document.getElementById(`content-exact-dates${i}`);
+	const monthInput = document.getElementById(`monthInput${i}`);
+
+    // Make sure all elements exist before attaching events
+    if (!fullMonthBtn || !exactDatesBtn || !fullMonthContent || !exactDatesContent) continue;
+
+    function activateTab(selectedBtn, showContent, hideContent) {
+      fullMonthBtn.classList.remove('active');
+      exactDatesBtn.classList.remove('active');
+      fullMonthContent.classList.remove('show', 'active');
+      exactDatesContent.classList.remove('show', 'active');
+
+      selectedBtn.classList.add('active');
+      showContent.classList.add('show', 'active');
+
+      fullMonthBtn.setAttribute('aria-selected', 'false');
+      exactDatesBtn.setAttribute('aria-selected', 'false');
+      selectedBtn.setAttribute('aria-selected', 'true');
+    }
+
+    fullMonthBtn.addEventListener('click', () => {
+      activateTab(fullMonthBtn, fullMonthContent, exactDatesContent);
+    });
+
+    exactDatesBtn.addEventListener('click', () => {
+      activateTab(exactDatesBtn, exactDatesContent, fullMonthContent);
+    });
+	
+	fullMonthContent.querySelectorAll('.month').forEach(month => {
+      month.addEventListener('click', () => {
+        month.classList.toggle('selected');
+        const selectedMonths = Array.from(fullMonthContent.querySelectorAll('.month.selected')).map(el => {
+          const monthName = el.querySelector('h3')?.textContent.trim();
+          const year = el.querySelector('p')?.textContent.trim();
+          return `${monthName} ${year}`;
+        });
+        monthInput.value = selectedMonths.join(', ');
+      });
+    });
+  }
+});
+</script>
+<!-- js for day select -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const totalInstances = 3;
+
+  for (let i = 1; i <= totalInstances; i++) {
+    initCalendarInstance(i);
+  }
+
+  function initCalendarInstance(i) {
+    const calendar1 = document.getElementById(`calendar-1-${i}`);
+    const calendar2 = document.getElementById(`calendar-2-${i}`);
+    const prevBtn = document.getElementById(`prev-month-${i}`);
+    const nextBtn = document.getElementById(`next-month-${i}`);
+    const monthInput = document.getElementById(`monthInput${i}`);
+
+    if (!calendar1 || !calendar2 || !prevBtn || !nextBtn || !monthInput) {
+      console.warn(`Calendar instance ${i} missing required elements.`);
+      return;
+    }
+
+    let currentYear = new Date().getFullYear();
+    let currentMonth = new Date().getMonth();
+
+    let selectedStartDate = null;
+    let selectedEndDate = null;
+
+    const monthNames = [
+      'Ιανουάριος', 'Φεβρουάριος', 'Μάρτιος', 'Απρίλιος',
+      'Μάιος', 'Ιούνιος', 'Ιούλιος', 'Αύγουστος',
+      'Σεπτέμβριος', 'Οκτώβριος', 'Νοέμβριος', 'Δεκέμβριος'
+    ];
+
+    function daysInMonth(year, month) {
+      return new Date(year, month + 1, 0).getDate();
+    }
+
+    function formatDate(year, month, day) {
+      return new Date(year, month, day).setHours(0,0,0,0);
+    }
+
+    function updateExactDatesInput() {
+      if (selectedStartDate && selectedEndDate) {
+        const start = new Date(selectedStartDate);
+        const end = new Date(selectedEndDate);
+        const formatToGreek = d => d.toLocaleDateString('el-GR');
+        monthInput.value = `${formatToGreek(start)} - ${formatToGreek(end)}`;
+      } else if (selectedStartDate) {
+        const start = new Date(selectedStartDate);
+        monthInput.value = `${start.toLocaleDateString('el-GR')}`;
+      } else {
+        monthInput.value = '';
+      }
+    }
+
+    function renderCalendar(container, year, month) {
+      const daysOfWeek = ['Δευ', 'Τρι', 'Τετ', 'Πεμ', 'Παρ', 'Σαβ', 'Κυρ'];
+
+      const firstDay = new Date(year, month, 1);
+      const startingDay = firstDay.getDay(); // 0=Sun, 1=Mon...
+
+      let startIndex = startingDay === 0 ? 6 : startingDay - 1;
+
+      const totalDays = daysInMonth(year, month);
+      const today = new Date();
+      today.setHours(0,0,0,0);
+
+      let html = `<div class="month-header" style="text-align:center; font-weight:bold; margin-bottom:8px;">
+                    ${monthNames[month]} ${year}
+                  </div>`;
+
+      html += '<div class="days-row" style="display:grid; grid-template-columns:repeat(7,1fr); gap:5px; font-weight:bold;">';
+      daysOfWeek.forEach(day => {
+        html += `<div>${day}</div>`;
+      });
+      html += '</div>';
+
+      html += '<div class="dates-grid">';
+      for (let i = 0; i < startIndex; i++) {
+        html += '<div></div>';
+      }
+
+      for (let d = 1; d <= totalDays; d++) {
+        const thisDateVal = formatDate(year, month, d);
+        let classes = 'date-cell';
+
+        if (selectedStartDate !== null && selectedEndDate !== null) {
+          if (thisDateVal >= selectedStartDate && thisDateVal <= selectedEndDate) {
+            classes += ' selected-range';
+          }
+          if (thisDateVal === selectedStartDate) {
+            classes += ' selected-start';
+          }
+          if (thisDateVal === selectedEndDate) {
+            classes += ' selected-end';
+          }
+        } else if (selectedStartDate !== null && selectedEndDate === null) {
+          if (thisDateVal === selectedStartDate) {
+            classes += ' selected-start';
+          }
+        }
+
+        if (thisDateVal < today.getTime()) {
+          classes += ' past-date';
+        }
+
+        html += `<div class="${classes}" data-day="${d}">${d}</div>`;
+      }
+      html += '</div>';
+
+      container.innerHTML = html;
+
+      const dateDivs = container.querySelectorAll('.dates-grid div:not(:empty)');
+      dateDivs.forEach(div => {
+        if (div.classList.contains('past-date')) return;
+
+        div.addEventListener('click', () => {
+          const day = parseInt(div.textContent, 10);
+          const clickedDate = formatDate(year, month, day);
+
+          if (selectedStartDate === null || (selectedStartDate !== null && selectedEndDate !== null)) {
+            selectedStartDate = clickedDate;
+            selectedEndDate = null;
+          } else if (clickedDate < selectedStartDate) {
+            selectedStartDate = clickedDate;
+          } else {
+            selectedEndDate = clickedDate;
+          }
+
+          updateExactDatesInput();
+          render();
+        });
+      });
+    }
+
+    function render() {
+      renderCalendar(calendar1, currentYear, currentMonth);
+
+      let nextMonth = currentMonth + 1;
+      let nextYear = currentYear;
+      if (nextMonth > 11) {
+        nextMonth = 0;
+        nextYear++;
+      }
+      renderCalendar(calendar2, nextYear, nextMonth);
+    }
+
+    prevBtn.addEventListener('click', () => {
+      currentMonth--;
+      if (currentMonth < 0) {
+        currentMonth = 11;
+        currentYear--;
+      }
+      render();
+    });
+
+    nextBtn.addEventListener('click', () => {
+      currentMonth++;
+      if (currentMonth > 11) {
+        currentMonth = 0;
+        currentYear++;
+      }
+      render();
+    });
+
+    render();
+  }
+});
+
+</script>
+<!-- js for panel3 end-->
+
+
+<!-- js for panel7 more rooms -->
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const panel = document.querySelector('.dropdown-panel.panel7');
+  const addRoomBtn = panel.querySelector('.more-btn');
+  const originalRoomBlock = panel.querySelector('.room-block');
+
+  addRoomBtn.addEventListener('click', () => {
+    const roomsCount = panel.querySelectorAll('.room-block').length;
+    if (roomsCount >= 3) return;  // max 3 rooms
+
+    const newRoomNumber = roomsCount + 1;
+    const newRoomBlock = originalRoomBlock.cloneNode(true);
+
+    // Update title and reset counts
+    newRoomBlock.querySelector('.dropdown-title').textContent = `Δωμάτιο ${newRoomNumber}`;
+    newRoomBlock.querySelectorAll('.count-num').forEach(el => el.textContent = '0');
+
+    // Insert before addRoomBtn
+    panel.insertBefore(newRoomBlock, addRoomBtn);
+
+    // Add event listeners to new buttons only
+    newRoomBlock.querySelectorAll('.count-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const countEl = btn.parentElement.querySelector('.count-num');
+        let count = parseInt(countEl.textContent);
+        if (btn.classList.contains('plus')) {
+          countEl.textContent = count + 1;
+        } else if (btn.classList.contains('minus') && count > 0) {
+          countEl.textContent = count - 1;
+        }
+        updateVisitorInput();
+      });
+    });
+
+    // Update input live after changes
+    function updateVisitorInput() {
+      const input = panel.closest('.custom-form-wrapper').querySelector('input.custom-input');
+      const visitorFrames = panel.querySelectorAll('.visitor-frame');
+      const parts = [];
+      visitorFrames.forEach(frame => {
+        const type = frame.querySelector('.visitor-type').textContent.trim();
+        const count = parseInt(frame.querySelector('.count-num').textContent);
+        parts.push(`${type}: ${count}`);
+      });
+      input.value = parts.join(', ');
+    }
+  });
+});
+
+</script>
+
+
+
+<script>
+// Parse Greek date string to JS Date - not needed now because we start fresh
+// So we only need the formatting function
+
+// Format JS Date to Greek date string like "ΤΕΤ 12 ΦΕΒ 2025"
+function formatGreekDate(date) {
+  const days = ['ΚΥΡ', 'ΔΕΥ', 'ΤΡΙ', 'ΤΕΤ', 'ΠΕΜ', 'ΠΑΡ', 'ΣΑΒ'];
+  const months = ['ΙΑΝ', 'ΦΕΒ', 'ΜΑΡ', 'ΑΠΡ', 'ΜΑΙ', 'ΙΟΥΝ', 'ΙΟΥΛ', 'ΑΥΓ', 'ΣΕΠ', 'ΟΚΤ', 'ΝΟΕ', 'ΔΕΚ'];
+
+  const dayName = days[date.getDay()];
+  const dayNum = date.getDate();
+  const monthName = months[date.getMonth()];
+  const year = date.getFullYear();
+
+  return `${dayName} ${dayNum} ${monthName} ${year}`;
+}
+
+// Get the start of the week for a given date (Monday as start)
+function getStartOfWeek(date, startDay = 1) {
+  // startDay: 0 = Sunday, 1 = Monday
+  const day = date.getDay();
+  let diff = day - startDay;
+  if (diff < 0) diff += 7; // if negative, wrap around
+  const startOfWeek = new Date(date);
+  startOfWeek.setDate(date.getDate() - diff);
+  startOfWeek.setHours(0, 0, 0, 0);
+  return startOfWeek;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  const buttonWrappers = document.querySelectorAll('.button-wrapper');
+  const weekChangeButtons = document.querySelectorAll('.week-change-button');
+
+  // Get user's current date
+  const today = new Date();
+
+  // Start of current week (Monday)
+  let currentBaseDate = getStartOfWeek(today, 1);
+
+  // Assuming each button is one day apart, create day offsets
+  const dayOffsets = Array.from(buttonWrappers).map((_, i) => i);
+
+  // Update all buttons with formatted Greek dates
+  function updateDates() {
+    buttonWrappers.forEach((wrapper, i) => {
+      const newDate = new Date(currentBaseDate);
+      newDate.setDate(newDate.getDate() + dayOffsets[i]);
+      wrapper.querySelector('.top-text').textContent = formatGreekDate(newDate);
+    });
+  }
+
+  // Initialize buttons with the current week dates
+  updateDates();
+
+  // Week change button handlers
+  weekChangeButtons[0].addEventListener('click', () => {
+    // Νωριτερα - move 7 days back
+    currentBaseDate.setDate(currentBaseDate.getDate() - 7);
+    updateDates();
+  });
+
+  weekChangeButtons[1].addEventListener('click', () => {
+    // αργοτερα - move 7 days forward
+    currentBaseDate.setDate(currentBaseDate.getDate() + 7);
+    updateDates();
+  });
+});
+
+</script>
+
+
+  </body>
+</html>
